@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RC — Информация</title>
+
+  <style>
+    /* Сброс */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Тёмный фон всей страницы */
+    body {
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: #e0e0e0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Тёмная строка сверху (навбар) */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #1c1c1c;
+      border-bottom: 1px solid #2a2a2a;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    /* Левый блок: иконка + название */
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Иконка RC — кнопка-ссылка на главную */
+    .logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #97c9eb, #320546);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 16px;
+      color: #fff;
+      letter-spacing: 1px;
+      user-select: none;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .logo:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 12px rgba(151, 201, 235, 0.6);
+    }
+
+    .logo:active {
+      transform: scale(0.95);
+    }
+
+    .brand-text {
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    /* Правый блок: 3 кнопки-ссылки */
+    .nav-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    /* Стили для ссылок-кнопок */
+    .nav-buttons .btn {
+      display: inline-block;
+      background: #2a2a2a;
+      color: #e0e0e0;
+      border: 1px solid #3a3a3a;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      text-decoration: none; /* Убираем подчеркивание у ссылок */
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .nav-buttons .btn:hover {
+      background: #6d6d6d;
+      border-color: #313131;
+      color: #fff;
+    }
+
+    .nav-buttons .btn:active {
+      transform: scale(0.97);
+    }
+
+    /* Контент */
+    main {
+      flex: 1;
+      max-width: 900px;
+      width: 100%;
+      margin: 30px auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #aaa;
+      margin-bottom: 10px;
+    }
+
+    /* ===== Серый блок для текста ===== */
+    .text-block {
+      margin-top: 30px;
+      background: #2a2a2a;
+      border: 1px solid #3a3a3a;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: left;
+      color: #e0e0e0;
+      line-height: 1.7;
+    }
+
+    /* Адаптив для мобильных */
+    @media (max-width: 600px) {
+      .brand-text { display: none; }
+      .nav-buttons .btn { padding: 6px 10px; font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Тёмная строка сверху -->
+  <nav class="navbar">
+    <!-- Слева: иконка RC (кнопка на главную) -->
+    <div class="brand">
+      <a href="rc_web.html" class="logo" title="На главную">RC</a>
+      <span class="brand-text">RC WEB</span>
+    </div>
+
+    <!-- Справа: 3 кнопки-ссылки -->
+    <div class="nav-buttons">
+      <a href="rc_web_proj.html" class="btn">проекты</a>
+      <!-- ▼ Текущая страница ▼ -->
+      <a href="rc_web_info.html" class="btn">информация</a>
+      <a href="rc_web_help.html" class="btn">поддержка RC</a>
+    </div>
+  </nav>
+
+  <!-- Контент страницы информации -->
+  <main>
+    <h1>Информация</h1>
+    <p>Вся информация и подробности с обсуждением</p>
+
+    <!-- ===== Серый блок: пишите сюда текст в коде ===== -->
+    <section class="text-block">
+      <!-- ▼ ВПИСЫВАЙТЕ СВОЙ ТЕКСТ ЗДЕСЬ ▼ -->
+      <p>Здесь будет текст страницы информации. Просто отредактируйте этот блок в коде.</p>
+      <p>вся информация и подробности с обусуждением.</p>
+      <!-- ▲ ВПИСЫВАЙТЕ СВОЙ ТЕКСТ ЗДЕСЬ ▲ -->
+    </section>
+
+  </main>
+
+</body>
+</html>
